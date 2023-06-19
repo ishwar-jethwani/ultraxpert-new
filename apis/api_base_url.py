@@ -1,0 +1,1 @@
+MEDIUM_BASE_URL = "https://api.medium.com/v1"

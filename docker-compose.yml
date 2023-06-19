@@ -1,0 +1,38 @@
+version: "3.11"
+services:
+  db:
+    image: postgres:13.3
+    container_name: db
+    restart: always
+    environment:
+      POSTGRES_DATABASE: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - .dbdata:/var/lib/postgres
+    ports:
+      - "32768:5432"
+  redis:
+    image: redis:alpine
+    command: redis-server
+    ports:
+      - "14000:6379"
+    expose:
+      - 6379
+  web:
+    build: .
+    command: python3 manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/ultraxpert
+    ports:
+      - "8000:8000"
+    environment:
+      - SERVER=False
+      - DEBUG=True
+      - POSTGRES_NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - REDIS_HOST=redis://redis:6379
+    depends_on:
+      - db
+      - redis

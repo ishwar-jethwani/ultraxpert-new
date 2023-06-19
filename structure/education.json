@@ -1,0 +1,77 @@
+[
+    {
+        "type": "High School",
+        "institute_name": "RNA",
+        "city":"city_name",
+        "state_name":"state_name",
+        "country":"country",
+        "passing_year": "2010",
+        "Devision": "First Division"  
+    },
+    {
+        "type": "Higher Scondry",
+        "institute_name": "RNA",
+        "city":"city_name",
+        "state_name":"state_name",
+        "country":"country",
+        "passing_year": "2013",
+        "Devision": "First Division"  
+    },
+    {
+        "type": "Graduation",
+        "institute_name": "RNA",
+        "city":"city_name",
+        "state_name":"state_name",
+        "country":"country",
+        "passing_year": "2013",
+        "Devision": "First Division"  
+    },
+    {
+        "type": " Post Graduation",
+        "institute_name": "RNA",
+        "city":"city_name",
+        "state_name":"state_name",
+        "country":"country",
+        "passing_year": "2013",
+        "Devision": "First Division"  
+    },
+    {
+        "type": "Certificate",
+        "institute_name": "RNA",
+        "city":"city_name",
+        "state_name":"state_name",
+        "country":"country",
+        "passing_year": "2013",
+        "Devision": "First Division"  
+    },
+    {
+        "type": "Certificate",
+        "institute_name": "RNA",
+        "city":"city_name",
+        "state_name":"state_name",
+        "country":"country",
+        "passing_year": "2013",
+        "Devision": "First Division"  
+    },
+    {
+        "type": "Certificate",
+        "institute_name": "RNA",
+        "city":"city_name",
+        "state_name":"state_name",
+        "country":"country",
+        "passing_year": "2013",
+        "Devision": "First Division"  
+    },
+    {
+        "type": "Certificate",
+        "institute_name": "RNA",
+        "city":"city_name",
+        "state_name":"state_name",
+        "country":"country",
+        "passing_year": "2013",
+        "Devision": "First Division"  
+    }
+
+]
+
+

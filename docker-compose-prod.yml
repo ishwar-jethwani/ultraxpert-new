@@ -1,0 +1,47 @@
+version: "3.11"
+services:
+  db: 
+    image: postgres:13.3
+    container_name: db
+    restart: always
+    environment:
+      POSTGRES_DATABASE: ultraxpert
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Ultra@2023
+    volumes:
+      - .dbdata:/var/lib/postgres
+    ports:
+      - "32768:5432"
+  redis:
+    image: redis:alpine
+    command: redis-server
+    ports:
+      - "14000:6379"
+  web:
+    build: .
+    command: python3 manage.py runserver 0.0.0.0:80
+    volumes:
+      - .:/code
+    ports:
+      - "80:80"
+    environment:
+      - SECRET_KEY=django-insecure-azkq_@tyfx2e(gec-*88ld^aem1x5)9r&pgvk$x!#ql6$zw%ff
+      - DEBUG=False
+      - SERVER=True
+      - POSTGRES_DATABASE=ultraxpert
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Ultra@2023
+      - AWS_ACCESS_KEY_ID=AKIAVGPIUD52WHD2I4EV
+      - AWS_SECRET_ACCESS_KEY=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
+      - S3_BUCKET_NAME=ultra-admin-staticfile
+      - MEDIA_BUCKET=ultraxpert-main
+      - REGION_NAME=ap-south-1
+      - EMAIL_HOST_USER_NAME=ultraxpert01@gmail.com
+      - EMAIL_PASSWORD=zgrrkxjffoceaqgi
+      - ADMIN_SITE_HEADER=UltraXpert
+      - PAYMENT_TEST_API_KEY=rzp_test_QcOL9zTcksv1a6
+      - PAYMENT_TEST_SECRET_KEY=XyW976Dg7jIvnxSCsBEN7gph
+      - REDIS_HOST=redis://redis:6379
+    depends_on:
+      - db
+      - redis

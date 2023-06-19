@@ -1,0 +1,38 @@
+from decouple import config
+
+# Created On 28-11-2022 at 15:21
+
+# Debug Mode 
+DEBUG = config('DEBUG', default=False, cast=bool)
+SECRET_KEY = config("SECRET_KEY")
+SERVER = config("SERVER",default=True, cast=bool)
+
+# Admin Configuration
+ADMIN_SITE_HEADER = config("ADMIN_SITE_HEADER")
+
+# Production Databse
+RDS_PRODUCTION_DB_NAME = config("RDS_PRODUCTION_DB_NAME")
+RDS_PRODUCTION_DB_USERNAME = config("RDS_PRODUCTION_DB_USERNAME")
+RDS_PRODUCTION_DB_PASSWORD = config("RDS_PRODUCTION_DB_PASSWORD")
+RDS_PRODUCTION_DB_HOSTNAME = config("RDS_PRODUCTION_DB_HOSTNAME")
+RDS_PRODUCTION_DB_PORT = config("RDS_PRODUCTION_DB_PORT")
+
+# AWS S3 Connection
+AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY") 
+S3_BUCKET_NAME = config("S3_BUCKET_NAME")
+REGION_NAME = config("REGION_NAME")
+MEDIA_BUCKET= config("MEDIA_BUCKET")
+
+# Email Configuaration 
+EMAIL_HOST_USER_NAME  = config("EMAIL_HOST_USER_NAME")
+EMAIL_PASSWORD = config("EMAIL_PASSWORD")
+
+# RazorPay Configuration
+PAYMENT_TEST_API_KEY = config("PAYMENT_TEST_API_KEY")
+PAYMENT_TEST_SECRET_KEY = config("PAYMENT_TEST_SECRET_KEY")
+
+
+
+
+

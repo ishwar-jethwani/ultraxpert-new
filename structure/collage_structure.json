@@ -1,0 +1,11 @@
+[
+    {
+        "city":"city_name",
+        "collages":[
+            {
+                "collage_name":"name",
+                "category":"engineering"
+            }
+        ]
+    }
+]
